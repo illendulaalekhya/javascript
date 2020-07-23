@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>signup</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+	<link rel="stylesheet" href="loginstyles.css">
+	<script>
+		function validate(){
+			var email=document.getElementById("email").value;
+			
+			var pattern_email=/[a-z][a-z0-9_]*[@][a-z]+[.][a-z]{2,3}/;
+			var matched_pattern=email.match(pattern_email);
+			if(matched_pattern==null){
+			alert("please enter a valid email");
+			return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="mainbox">
+		<!--<div class=signup><div class=imageh><img class=hatimg src="hat.jpg">signup</div></pre>-->
+		<div class=signup>
+			<!--<table>
+				<tr><td><img class=hatimg src="hat.jpg"></td>
+					<td><pre>               <font size=6 color=white><b>Sign in</b></font></pre></td>
+					<td align=right><i class="fa fa-close" style="font-size:40px;color:white"></i></td>
+				</tr>
+			</table>-->
+			<img class=hatimg src="hat.jpg">
+			<h5><b>Sign in</b></h5>
+
+		</div>
+		<div class=inputdiv>
+			<form action="" onsubmit="validate()">
+				<div class="input-container">
+    				 <input class="input-field" type="text" placeholder="mail@example.com" id="email">
+   					 <i class="fa fa-envelope icon"></i>
+ 				 </div>
+
+ 				 <div class="input-container">
+   
+   					 <input class="input-field" type="password" placeholder="password" name="psw">
+     				<i class="fa fa-lock icon"></i>
+ 				 </div>
+ 				 <button class=btn type=submit><font size=4><b>SIGN IN</b></font></button>
+ 			
+ 			<a href=""><h5 style="float:left;">Forgot your password?</h5></a>                     
+ 			<a href=""><h5 style="float:right;">Register!</h5></a></form><br>
+ 			<h4>OR</h4>
+ 			<button class="fa fa-facebook">
+ 				
+ 			</button><br><br>
+ 			<button class="fa fa-google"></button><br><br><br>
+ 			<input type=button value="<Epam Login>" class=epambtn>
+		</div>
+		
+	</div>
+</body>
+</html>
